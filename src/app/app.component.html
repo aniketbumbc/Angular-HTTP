@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<h1 align="center"> HTTP WORKS HERE</h1>
+<label for="username"> Name: </label> <input type="text" id="username" #username>
+<label for="number">  Number:</label> <input type="text" id="number" #number>
+<label for="branch">  Major: </label> <input type="text" id="branch" #branch>
+<button type="submit" (click)="onclick(username.value,number.value,branch.value)">Send Data </button>
+<hr>
+<button (click)="ongetdata()"> Get Data</button>
+<h1> List of Entries </h1>
+
+<ul>
+  <p> Names
+  <li *ngFor="let item of items">{{item.username}}</li></p> <br>
+  <p> Number
+  <li *ngFor="let item of items">{{item.number}}</li></p><br>
+  <p> Major
+  <li *ngFor="let item of items">{{item.branch}}</li> </p>
+</ul>
+<hr>
+<h2>{{asyncthing|async}}</h2>
